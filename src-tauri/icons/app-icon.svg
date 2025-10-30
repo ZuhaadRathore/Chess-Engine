@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Background with rounded corners (for iOS) -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#646cff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#535bf2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded rectangle -->
+  <rect width="1024" height="1024" rx="180" ry="180" fill="url(#bgGradient)"/>
+
+  <!-- Simplified chess board pattern in background -->
+  <g opacity="0.15">
+    <!-- Light squares as pattern -->
+    <rect x="256" y="256" width="128" height="128" fill="white"/>
+    <rect x="512" y="256" width="128" height="128" fill="white"/>
+    <rect x="384" y="384" width="128" height="128" fill="white"/>
+    <rect x="640" y="384" width="128" height="128" fill="white"/>
+    <rect x="256" y="512" width="128" height="128" fill="white"/>
+    <rect x="512" y="512" width="128" height="128" fill="white"/>
+    <rect x="384" y="640" width="128" height="128" fill="white"/>
+    <rect x="640" y="640" width="128" height="128" fill="white"/>
+  </g>
+
+  <!-- King piece (centered, scaled up for icon) -->
+  <g transform="translate(512, 512) scale(18) translate(-22.5, -22.5)" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cross on top -->
+    <path d="M 22.5,11.63 L 22.5,6" stroke-linejoin="miter" stroke-width="1.8"/>
+    <path d="M 20,8 L 25,8" stroke-linejoin="miter" stroke-width="1.8"/>
+    <!-- Crown body -->
+    <path d="M 22.5,25 C 22.5,25 27,17.5 25.5,14.5 C 25.5,14.5 24.5,12 22.5,12 C 20.5,12 19.5,14.5 19.5,14.5 C 18,17.5 22.5,25 22.5,25" fill="#fff" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1.8"/>
+    <!-- Base -->
+    <path d="M 12.5,37 C 18,40.5 27,40.5 32.5,37 L 32.5,30 C 32.5,30 41.5,25.5 38.5,19.5 C 34.5,13 25,16 22.5,23.5 L 22.5,27 L 22.5,23.5 C 20,16 10.5,13 6.5,19.5 C 3.5,25.5 12.5,30 12.5,30 L 12.5,37" fill="#fff" stroke-width="1.8"/>
+    <!-- Details -->
+    <path d="M 12.5,30 C 18,27 27,27 32.5,30" fill="none" stroke-width="1.8"/>
+    <path d="M 12.5,33.5 C 18,30.5 27,30.5 32.5,33.5" fill="none" stroke-width="1.8"/>
+    <path d="M 12.5,37 C 18,34 27,34 32.5,37" fill="none" stroke-width="1.8"/>
+  </g>
+</svg>

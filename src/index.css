@@ -1,0 +1,55 @@
+:root {
+  font-family: 'Arial Black', 'Impact', 'Franklin Gothic Medium', 'Arial Narrow Bold', sans-serif;
+  line-height: 1.4;
+  font-weight: 700;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background-color: var(--background);
+  color: var(--text-color);
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+button:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
+}

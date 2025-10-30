@@ -1,0 +1,92 @@
+.game-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--card-background);
+  border: 4px solid var(--border-color);
+  border-radius: 0;
+  margin-bottom: var(--spacing-md);
+  min-width: 600px;
+  text-align: center;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.turn-indicator {
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.turn-white {
+  color: var(--text-color);
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.turn-black {
+  color: var(--text-color);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.status-message {
+  font-size: 1.25rem;
+  font-weight: 900;
+  padding: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-inprogress {
+  color: var(--text-color);
+}
+
+.status-check {
+  color: var(--warning-color);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.status-checkmate {
+  color: var(--success-color);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.status-stalemate,
+.status-drawbyfiftymoverule,
+.status-drawbyinsufficientmaterial,
+.status-drawbyrepetition {
+  color: var(--text-secondary);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.move-counter {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: normal;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .game-status {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: auto;
+    width: 100%;
+  }
+
+  .status-message {
+    font-size: 1.125rem;
+  }
+
+  .turn-indicator {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .game-status {
+    min-width: 500px;
+  }
+}

@@ -1,0 +1,85 @@
+.evaluation-graph-container {
+  background: #222;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.evaluation-graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+}
+
+.evaluation-graph-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.evaluation-graph-header .move-count {
+  font-size: 12px;
+  color: #888;
+}
+
+.evaluation-graph-canvas-wrapper {
+  margin-bottom: 12px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.evaluation-graph-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.evaluation-graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #333;
+  font-size: 11px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #aaa;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-brilliant {
+  background-color: #44ff44;
+}
+
+.legend-good {
+  background-color: #88ff44;
+}
+
+.legend-inaccuracy {
+  background-color: #ffaa44;
+}
+
+.legend-mistake {
+  background-color: #ff8844;
+}
+
+.legend-blunder {
+  background-color: #ff4444;
+}

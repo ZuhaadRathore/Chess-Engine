@@ -1,0 +1,153 @@
+.local-game-page {
+  padding: 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.local-game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.local-game-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.local-game-subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.local-game-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 320px);
+  gap: 1.5rem;
+  flex: 1;
+  align-items: start;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.local-game-board-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.local-game-board-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.local-game-evaluation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.local-game-board {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.local-game-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.local-game-status {
+  background: var(--card-background);
+  border: 4px solid var(--border-color);
+  border-radius: 0;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.local-game-status-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+.local-game-status-value {
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.local-game-status-result {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+}
+
+.local-game-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.local-game-controls .btn {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .local-game-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .local-game-board-container {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .local-game-sidebar {
+    order: -1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .local-game-page {
+    padding: 0.5rem;
+  }
+
+  .local-game-board-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .local-game-evaluation {
+    order: 1;
+  }
+
+  .local-game-board {
+    order: 2;
+  }
+}

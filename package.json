@@ -1,0 +1,64 @@
+{
+  "name": "chess-engine",
+  "version": "0.1.0",
+  "description": "A cross-platform chess application built with Tauri v2",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chess-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chess-engine/issues"
+  },
+  "homepage": "https://github.com/yourusername/chess-engine#readme",
+  "keywords": [
+    "chess",
+    "tauri",
+    "react",
+    "typescript",
+    "rust",
+    "cross-platform",
+    "game"
+  ],
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "tauri:android": "tauri android",
+    "tauri:ios": "tauri ios",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-haptics": "^2.0.0",
+    "@tauri-apps/plugin-shell": "^2.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "jsdom": "^24.1.1",
+    "sharp": "^0.34.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-svgr": "^4.5.0",
+    "vitest": "^2.1.5"
+  },
+  "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81",
+  "optionalDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.52.5"
+  }
+}

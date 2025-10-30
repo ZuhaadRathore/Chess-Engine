@@ -1,0 +1,240 @@
+:root {
+  /* Brutalist Color Palette - Concrete & Raw */
+  --primary-color: #1a1a1a;
+  --primary-hover: #000000;
+  --background: #e8e5e0;
+  --text-color: #0a0a0a;
+  --text-secondary: #3a3a3a;
+  --text-muted: #666666;
+  --border-color: #2a2a2a;
+
+  /* Card backgrounds - Concrete tones */
+  --card-background: #d4d0ca;
+  --hover-background: #c5c1bb;
+
+  /* Status colors - Bold and raw */
+  --success-color: #1f7a1f;
+  --warning-color: #c45500;
+  --error-color: #8b0000;
+  --info-color: #004080;
+
+  /* Info backgrounds - Concrete with color tints */
+  --info-background: rgba(0, 64, 128, 0.15);
+  --success-background: rgba(31, 122, 31, 0.15);
+  --warning-background: rgba(196, 85, 0, 0.15);
+  --error-background: rgba(139, 0, 0, 0.15);
+
+  /* Primary color RGB (for rgba usage) */
+  --primary-color-rgb: 26, 26, 26;
+
+  /* Spacing - Brutalist (larger, bolder) */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Breakpoints */
+  --mobile: 640px;
+  --tablet: 768px;
+  --desktop: 1024px;
+
+  /* Z-index layers */
+  --z-modal: 2000;
+  --z-overlay: 1500;
+  --z-dropdown: 1000;
+
+  /* No smooth transitions - Brutalism is raw and instant */
+  transition: none;
+}
+
+/* Dark theme - Brutalist concrete night */
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text-color: #e8e5e0;
+  --text-secondary: #b8b5b0;
+  --text-muted: #888580;
+  --border-color: #d4d0ca;
+  --card-background: #2a2a2a;
+  --hover-background: #3a3a3a;
+  --info-background: rgba(100, 150, 200, 0.2);
+  --success-background: rgba(80, 180, 80, 0.2);
+  --warning-background: rgba(220, 120, 50, 0.2);
+  --error-background: rgba(180, 50, 50, 0.2);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--background);
+  background-color: var(--primary-color);
+  border: 3px solid var(--border-color);
+  border-radius: 0;
+  cursor: pointer;
+  transition: none;
+  min-width: 48px;
+  min-height: 48px;
+  touch-action: manipulation;
+  box-shadow: 4px 4px 0 var(--border-color);
+  position: relative;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 6px 6px 0 var(--border-color);
+  transform: translate(-2px, -2px);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--border-color);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  min-width: 200px;
+}
+
+.btn-secondary {
+  background: var(--text-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--text-color);
+}
+
+.btn-danger {
+  background: var(--error-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #d32f2f;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Utility classes */
+.loading-message {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.spinner {
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl);
+}
+
+.loading-spinner::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Error banner */
+.error-banner {
+  background: var(--error-background);
+  border: 4px solid var(--error-color);
+  border-radius: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--error-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  color: var(--error-color);
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .container {
+    padding: var(--spacing-sm);
+  }
+
+  .btn {
+    min-width: 48px;
+    min-height: 48px;
+    touch-action: manipulation;
+  }
+
+  .btn:active {
+    transform: scale(0.97);
+  }
+
+  .btn-large {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -1,0 +1,213 @@
+.chess-board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chess-board-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.chess-board-with-notation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.board-with-rank-labels {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.board-notation {
+  display: flex;
+  color: var(--text-color);
+  font-weight: 900;
+  font-size: 0.95rem;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.file-labels-top,
+.file-labels-bottom {
+  justify-content: center;
+  gap: 0;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.file-labels-top .notation-label,
+.file-labels-bottom .notation-label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(min(550px, calc(100vw - 200px)) / 8);
+}
+
+.rank-labels-left,
+.rank-labels-right {
+  flex-direction: column;
+  gap: 0;
+  width: 24px;
+}
+
+.rank-labels-left .notation-label,
+.rank-labels-right .notation-label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(min(550px, calc(100vw - 200px)) / 8);
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  aspect-ratio: 1 / 1;
+  width: min(550px, calc(100vw - 200px));
+  height: min(550px, calc(100vw - 200px));
+  border: 6px solid var(--border-color);
+  box-shadow:
+    8px 8px 0 rgba(0, 0, 0, 0.4),
+    12px 12px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+  contain: layout style paint;
+  touch-action: none;
+  /* Concrete texture overlay */
+  background: linear-gradient(135deg, transparent 48%, rgba(0, 0, 0, 0.03) 50%, transparent 52%);
+  position: relative;
+}
+
+.chess-board::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.02) 2px, rgba(0, 0, 0, 0.02) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.02) 2px, rgba(0, 0, 0, 0.02) 4px);
+  z-index: 10;
+}
+
+@supports (content-visibility: auto) {
+  .chess-board {
+    content-visibility: auto;
+  }
+}
+
+.chess-board-controls {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--error-color);
+  color: var(--background);
+  border: 4px solid var(--text-color);
+  border-radius: 0;
+  text-align: center;
+  max-width: 600px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.loading-message {
+  text-align: center;
+  padding: var(--spacing-xl);
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chess-board {
+    width: 500px;
+    height: 500px;
+  }
+
+  .file-labels-top .notation-label,
+  .file-labels-bottom .notation-label {
+    min-width: calc(500px / 8);
+  }
+
+  .rank-labels-left .notation-label,
+  .rank-labels-right .notation-label {
+    min-height: calc(500px / 8);
+  }
+
+  .chess-board-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .chess-board-container {
+    padding: var(--spacing-xs);
+  }
+
+  .chess-board {
+    width: min(100vw - 2rem, 450px);
+    height: min(100vw - 2rem, 450px);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .file-labels-top,
+  .file-labels-bottom {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .file-labels-top .notation-label,
+  .file-labels-bottom .notation-label {
+    min-width: calc((min(100vw - 2rem, 450px)) / 8);
+  }
+
+  .rank-labels-left,
+  .rank-labels-right {
+    width: 16px;
+    font-size: 0.75rem;
+  }
+
+  .rank-labels-left .notation-label,
+  .rank-labels-right .notation-label {
+    min-height: calc((min(100vw - 2rem, 450px)) / 8);
+  }
+
+  .board-notation {
+    font-size: 0.75rem;
+  }
+
+  .chess-board-wrapper {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Keep captured pieces stacked vertically on all screen sizes */
