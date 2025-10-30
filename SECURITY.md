@@ -15,7 +15,7 @@ We take the security of our chess application seriously. If you discover a secur
 ### How to Report
 
 1. **Do NOT** open a public issue for security vulnerabilities
-2. Email security details to your.email@example.com (replace with your contact)
+2. Report via GitHub Security Advisories at https://github.com/ZuhaadRathore/chess-engine/security/advisories/new
 3. Include as much information as possible:
    - Type of vulnerability
    - Steps to reproduce

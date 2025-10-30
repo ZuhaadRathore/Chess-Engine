@@ -2,16 +2,16 @@
   "name": "chess-engine",
   "version": "0.1.0",
   "description": "A cross-platform chess application built with Tauri v2",
-  "author": "Your Name <your.email@example.com>",
+  "author": "Zuhaad Rathore <zuhaad.rathore@example.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/chess-engine.git"
+    "url": "https://github.com/ZuhaadRathore/chess-engine.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/chess-engine/issues"
+    "url": "https://github.com/ZuhaadRathore/chess-engine/issues"
   },
-  "homepage": "https://github.com/yourusername/chess-engine#readme",
+  "homepage": "https://github.com/ZuhaadRathore/chess-engine#readme",
   "keywords": [
     "chess",
     "tauri",

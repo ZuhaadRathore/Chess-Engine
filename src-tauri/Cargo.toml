@@ -2,10 +2,10 @@
 name = "chess-engine"
 version = "0.1.0"
 description = "A cross-platform chess application built with Tauri v2, focused on polished local pass-and-play sessions"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Zuhaad Rathore <zuhaad.rathore@example.com>"]
 license = "MIT"
-repository = "https://github.com/yourusername/chess-engine"
-homepage = "https://github.com/yourusername/chess-engine"
+repository = "https://github.com/ZuhaadRathore/chess-engine"
+homepage = "https://github.com/ZuhaadRathore/chess-engine"
 keywords = ["chess", "tauri", "game", "cross-platform"]
 categories = ["games"]
 edition = "2021"

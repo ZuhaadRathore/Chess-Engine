@@ -49,5 +49,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Context API for theme management
 - Custom hooks for game state and analysis
 
-[unreleased]: https://github.com/yourusername/chess-engine/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/yourusername/chess-engine/releases/tag/v0.1.0
+[unreleased]: https://github.com/ZuhaadRathore/chess-engine/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/ZuhaadRathore/chess-engine/releases/tag/v0.1.0
